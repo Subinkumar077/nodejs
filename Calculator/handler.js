@@ -8,9 +8,8 @@ function requestHandler(req, res) {
         res.write('<html>');
         res.write('<head><title>Home</title></head>');
         res.write('<body>');
-        res.write('<a href="/">Home</a>');
         res.write('<h1>Welcome Calculate Your Problem</h1>');
-        res.write('<a href="/calculator">Calculator</a>');
+        res.write('<a href="/calculator">Go to Calculator</a>');
         res.write('</body>');
         res.write('</html>');
         return res.end();
@@ -18,7 +17,7 @@ function requestHandler(req, res) {
         res.write('<html>');
         res.write('<head><title>Calculator</title></head>');
         res.write('<body>');
-        res.write('<a href="/">Home</a>');
+        res.write('<a href="/">Go to Home</a> <br> <br>');
         res.write('<form action="/submit-details" method="POST">');
         res.write('<input type="number" name="number1" placeholder="Enter your 1st number"><br><br>');
         res.write('<input type="number" name="number2" placeholder="Enter your 2nd number"><br><br>');
