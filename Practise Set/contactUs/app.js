@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 
 app.get("/", (req, res, next) => {
     console.log("Handling the / for the GET", req.url, req.method);
-    res.send(`<h1>welcome to the server</h1>`)      
+    res.send(`<h1>Welcome to the server</h1>`)      
 })
 app.get("/contact-us", (req, res, next) => {
     console.log("Handling the / for the GET", req.url, req.method);
