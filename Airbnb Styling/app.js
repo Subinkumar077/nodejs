@@ -6,6 +6,7 @@ const rootDir = require("./utils/pathUtils.js")
 
 const app = express();
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded());
 app.use(userRouter);
 app.use("/host", hostRouter);

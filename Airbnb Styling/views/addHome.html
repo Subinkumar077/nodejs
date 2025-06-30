@@ -1,25 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Home</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #f8f8f8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      background-color: #FF5A5F;
+      padding: 15px 30px;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    main {
+      background: white;
+      padding: 40px;
+      margin-top: 40px;
+      border-radius: 12px;
+      text-align: center;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #FF5A5F;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+    }
+    label {
+      font-weight: 500;
+      color: #333;
+    }
+    input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    input:focus {
+      border-color: #FF5A5F;
+      outline: none;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background: #FF5A5F;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e04850;
+    }
+  </style>
 </head>
 <body>
-    <header>
-            <h1>Register Your Home</h1>
-    </header>
-    <main>
-        <form action ="/host/add-home" method = "POST">
-        <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required />
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required />
-    
-    <button type="submit">Submit</button>
-        </form>
-    </main>
-        
+  <header>
+    <nav>
+      <a href="/">Go to Home</a>
+      <a href="/host/add-home">Add Home</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Register Your Home</h1>
+    <form action="/host/add-home" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
 </body>
 </html>
